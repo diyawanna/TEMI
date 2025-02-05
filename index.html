@@ -22,6 +22,8 @@
 </div>
 <div class="page">
   <!--      <section class="d-none d-xl-block"><a class="d-block" href="https://www.templatemonster.com/landing-page-template/all-in-one-landing-page-lintense/" target="_blank"><img class="img-responsive" src="images/banner-top-2050x60.jpg" alt="" width="2050" height="60"/></a></section>-->
+
+  <!-- HEADER -->
   <header class="section page-header">
     <!--RD Navbar-->
     <div class="rd-navbar-wrap">
@@ -74,6 +76,8 @@
       </nav>
     </div>
   </header>
+
+
   <!-- Welcome to TEMI-->
   <section class="section section-md section-md-1 text-center bg-wave-dark-wrap pb-0 text-gray-600">
     <div class="bg-wave-dark bg-wave-dark-1 bg-gray-800">
@@ -411,55 +415,39 @@
     </div>
   </section>
   <!--      <section><a class="d-block" href="https://www.templatemonster.com/landing-page-template/all-in-one-landing-page-lintense/" target="_blank"><img class="img-responsive" src="images/banner-bottom-2050x310.jpg" alt="" width="2050" height="310"/></a></section>-->
-  <!-- Footer-->
-  <footer class="section footer-corporate bg-gray-800 position-relative">
-    <svg class="wave-dark" width="1920" height="713" viewBox="0 0 1920 713" fill="none">
-      <path class="wave-path wave-path-1" d="M1920 463.314V713H0V414.325C0.0515862 414.316 0.103105 414.308 0.154556 414.299C59.8232 467.769 270.664 573.445 636.676 568.392C873.316 565.126 1040.4 505.514 1188.57 452.65C1326.86 403.309 1448.68 359.846 1595.21 373.565C1727.41 385.944 1837.94 423.471 1920 463.314Z" fill="white"></path>
-      <path class="wave-path wave-path-2" d="M1920 463.988V713H0V234.66C102.275 199.182 221.353 170.486 354.422 158.026C584.381 136.494 775.567 204.707 992.611 282.146C1225.15 365.113 1373 457.092 1858.75 463.796C1879.49 464.082 1899.9 464.142 1920 463.988Z" fill="white"></path>
-      <path class="wave-path wave-path-3" d="M1920 85.9538V713H0V310.063C15.2357 310.099 30.6508 310.012 46.2454 309.796C417.632 304.67 679.852 211.113 912.389 128.146C1129.43 50.7068 1320.62 -17.5061 1550.58 4.02629C1690.21 17.1004 1814.43 48.0502 1920 85.9538Z" fill="white"></path>
-    </svg>
-    <div class="container">
-      <div class="footer-corporate-main text-center wow fadeInUp">
-        <h6>We’re Ready to Teach You!</h6>
-        <h2 class="heading-1">Let’s Achieve Academic Excellence Together</h2>
-        <p class="big">Do you want to excel in your studies and build a strong academic foundation? We are here to help you succeed! <br class='d-none d-lg-block' > Click the button below to contact us and start your journey toward academic success.</p>
-        <a class="button button-secondary button-nuka" href="tel:0702377317">Contact Us<span class="button-overlay"></span></a>
-      </div>
-      <div class="footer-corporate-aside text-center text-xl-left wow fadeInUp">
-        <div class="footer-corporate-aside-top">
-          <div class="footer-corporate-nav">
-<!--            <ul>-->
-<!--              <li><a href="#">About</a></li>-->
-<!--              <li><a href="#">Our Services</a></li>-->
-<!--              <li><a href="#">How We Work</a></li>-->
-<!--              <li><a href="#">Experience</a></li>-->
-<!--              <li><a href="#">Why Choose Us</a></li>-->
-<!--              <li><a href="#">Partners</a></li>-->
-<!--              <li><a href="#">Support</a></li>-->
-<!--              <li><a href="#">Testimonials</a></li>-->
-<!--              <li><a href="#">Pricing</a></li>-->
-<!--              <li><a href="#">FAQ</a></li>-->
-<!--              <li><a href="#">Contacts</a></li>-->
-<!--            </ul>-->
-          </div>
-          <div>
-            <ul class="list-social">
-              <li><a class="link-social icon novi-icon fa-youtube-play" href="https://www.youtube.com/@GenuineTalksSL"></a></li>
-              <li><a class="link-social icon novi-icon fa-facebook-f" href="https://web.facebook.com/tinytotsschoolcolombo"></a></li>
-              <li><a class="link-social icon novi-icon fa-instagram" href="https://www.instagram.com/rotary_international_school/"></a></li>
-<!--              <li><a class="link-social icon novi-icon fa-twitter" href="#"></a></li>-->
-<!--              <li><a class="link-social icon novi-icon fa-linkedin" href="#"></a></li>-->
-            </ul>
-          </div>
-        </div>
-        <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>.&nbsp;</span><span>TEMI</span><span>.&nbsp;</span><span>All Rights Reserved. Designed by <a href="https://tech.diyawanna.com/" target="_blank" rel="noopener noreferrer">DTS</a></span></p>
-      </div>
-    </div>
-  </footer>
+  <!-- FOOTER -->
 </div>
 <div class="snackbars" id="form-output-global"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // // Load the header
+  //   async function loadHeader() {
+  //     try {
+  //       const response = await fetch('./components/header.html');
+  //       if (!response.ok) throw new Error('Failed to load header');
+  //       const data = await response.text();
+  //       document.body.insertAdjacentHTML('afterbegin', data);
+  //       console.log('Header loaded successfully');
+  //     } catch (error) {
+  //       console.error('Header fetch error:', error);
+  //     }
+  //   }
+  //
+  //   document.addEventListener('DOMContentLoaded', loadHeader);
+
+  // Load the footer
+  fetch('./components/footer.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to load footer');
+      return response.text();
+    })
+    .then(data => document.body.insertAdjacentHTML('beforeend', data))
+    .catch(error => console.error('Footer fetch error:', error));
+});
+</script>
+
 <script src="js/core.min.js"></script>
 <script src="js/script.js"></script>
-<!-- coded by ragnar-->
+<!-- coded by @Sahan-->
 </body>
 </html>
